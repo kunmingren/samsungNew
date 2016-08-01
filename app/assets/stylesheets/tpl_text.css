@@ -1,0 +1,22 @@
+
+.text-list-container:before, .text-list-container:after {
+    content: '';
+    display: block;
+    height: 20px;
+}
+
+.text-list-container, .text-preview-pager-container, .text-preview-container {
+    padding: 0px 20px;
+}
+
+.text-preview-container pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+
+    font-size: 26px;
+    position: relative;
+}
+

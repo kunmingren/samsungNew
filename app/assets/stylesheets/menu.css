@@ -1,0 +1,112 @@
+
+/* menu styles */
+
+.menu-container {
+    position: absolute;
+    left: 72px;
+    top: 532px;
+    width: 1136px;
+    height: 152px;
+    z-index: 9;
+    color: #fff;
+    font-size: 26px;
+}
+
+.menu-container>.menu-name {
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+}
+
+.menu-container>.menu-guest-info {
+    width: 194px;
+    padding: 20px 25px;
+    float: left;
+    text-align: left;
+}
+
+.menu-container>.menu-guest-info span {
+    display: block;
+}
+
+.menu-container>.menu-date-info {
+    width: 194px;
+    height: 102px;
+    padding: 20px 25px;;
+    float: left;
+}
+
+.menu-container>.menu-item-container {
+    width: 580px;
+    height: 106px;
+    float: left;
+    overflow: hidden;
+    margin: 0px 10px;
+}
+
+.menu-container>.left-arrow {
+    display: block;
+    float: left;
+    height: 106px;
+    width: 24px;
+    background: url("../images/ic_arrow_left.png") no-repeat center;
+}
+
+.menu-container>.right-arrow {
+    display: block;
+    float: left;
+    height: 106px;
+    width: 24px;
+    background: url("../images/ic_arrow_right.png") no-repeat center;
+}
+
+.menu-container>.menu-date-info span {
+    text-align: right;
+    display: block;
+}
+
+.menu-container>.menu-item-container li {
+    float: left;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    position: relative;
+}
+
+.menu-container>.menu-item-container li.selected {
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-top: 0px;
+}
+
+.menu-container>.menu-item-container ul {
+    position: relative;
+}
+
+.menu-container>.menu-item-container ul:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* see http://stackoverflow.com/questions/7273338/how-to-vertically-align-an-image-inside-div */
+.menu-container>.menu-item-container li:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.menu-container>.menu-item-container li>img {
+    width: 80px;
+    position: absolute;
+    left: 0;
+}
+
+.menu-container>.menu-item-container li.selected>img {
+    position: absolute;
+    width: 100px;
+    right: 0px;
+    margin-left: 0;
+}

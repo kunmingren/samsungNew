@@ -1,0 +1,69 @@
+.number_btn{
+    width: 24px;
+    height: 24px;
+    background: url("../images/ic_button.png") no-repeat 0;
+    background-size: 24px 24px;
+    text-align: center;
+}
+
+.top-arrow {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    background: url("../images/ic_arrow_top.png") center no-repeat;
+    background-size: 24px 12px;
+}
+
+.bot-arrow {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    background: url("../images/ic_arrow_bot.png") center no-repeat;
+    background-size: 24px 12px;
+}
+
+.number_btn.active{
+    width: 24px;
+    height: 24px;
+    background: url("../images/ic_button_active.png") no-repeat 0;
+    background-size: 24px 24px;
+    text-align: center;
+}
+
+.btn_container{
+    width: 542px;
+    height:80px;
+}
+
+.button-confirm,.button-cart{
+    display: inline-block;
+    width: 120px;
+    height:41px;
+    background: url("../images/ic_button.png") no-repeat 0;
+    background-size: 120px;
+    text-align: center;
+}
+.button-confirm.active{
+    display: inline-block;
+    width: 120px;
+    height:41px;
+    background: url("../images/ic_button_active.png") no-repeat 0;
+    background-size: 120px;
+    text-align: center;
+}
+.button-cart.active{
+    display: inline-block;
+    width: 120px;
+    height:41px;
+    background: url("../images/ic_button_active.png") no-repeat 0;
+    background-size: 120px;
+    text-align: center;
+}
+.button-confirm,.button-cart>span{
+    display: inline-block;
+    width: 120px;
+    height: 41px;
+    line-height: 41px;
+}
+
+

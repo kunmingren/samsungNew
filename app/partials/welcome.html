@@ -1,0 +1,11 @@
+<div ng-controller="WelcomeController" class="welcome-content">
+    <p class="index-guest-name">{{guestName}}</p>
+    <p class="index-welcome-text">{{welcomeText}}</p>
+    <pre class="index-sub-welcome-text">{{subWelcomeText}}</pre>
+    <div class="index-room-language">
+        <p class="index-room-number">{{roomNumber}}</p>
+        <i ng-class="{'active': language=='zh-CN'}">中文</i>
+        <i ng-class="{'active': language=='en-US'}">English</i>
+        <p class="index-language-hint">{{cue}}</p>
+    </div>
+</div>

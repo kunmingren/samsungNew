@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<?php  header('Access-Control-Allow-Origin:*'); ?>
+<head>
+    <meta charset="UTF-8">
+    <title>Blue VoD</title>
+    <link rel="stylesheet" href="assets/stylesheets/bill.css" />
+    <link rel="stylesheet" href="assets/stylesheets/index.css" />
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
+    <link rel="stylesheet" href="assets/stylesheets/menu.css" />
+    <link rel="stylesheet" href="assets/stylesheets/movie.css" />
+    <link rel="stylesheet" href="assets/stylesheets/reset.css" />
+    <link rel="stylesheet" href="assets/stylesheets/toolbar.css" />
+    <link rel="stylesheet" href="assets/stylesheets/live.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_category_list.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_pic_text_simple.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_pic_text_category.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_text.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_text_detail.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_order_list.css" />
+    <link rel="stylesheet" href="assets/stylesheets/weather.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_weather_list.css" />
+    <link rel="stylesheet" href="assets/stylesheets/tpl_shopping_cart.css" />
+    <link rel="stylesheet" href="assets/stylesheets/test.css"/>
+</head>
+
+<body ng-app="app"  ng-keyup="onkeyup($event)" ng-keydown="onkeydown($event)" ng-controller="RootController">
+    <!-- view stack -->
+    <ul class="activity-stack-container">
+        <li ng-repeat="activity in activityStack" ng-show="$index==activityStack.length - 1 && !activity._hide">
+            <ng-include src="activity.templateUrl" class="include-content"  ng-class="{'menu-visible': showMenu}"></ng-include>
+        </li>
+    </ul>
+
+    <!-- menu -->
+    <div class="menu-container" ng-controller="MenuController" ng-show="showMenu">
+        <div class="menu-name">{{menuItems[selectedMenuItemIndex].name}}</div>
+        <div class="menu-guest-info">
+            <span>{{guestName}}</span>
+            <span>{{roomNumber}}</span>
+        </div>
+        <i class="left-arrow"></i>
+        <div class="menu-item-container">
+            <ul ng-style="{left: menuStyleLeft, width: menuStyleWidth}">
+                <li ng-repeat="menuItem in menuItems" ng-class="{'selected': selectedMenuItemIndex==$index}">
+                    <img ng-src="{{menuItem.icon}}">
+                </li>
+            </ul>
+        </div>
+        <i class="right-arrow"></i>
+        <div class="menu-date-info">
+            <span>{{dateString}}</span>
+            <span>{{timeString}}</span>
+        </div>
+    </div>
+
+    <!-- video event -->
+    <div id="test" style="color:#fff; background-color: rgba(50,40,30,0.5);"></div>
+
+    <!-- Player Controller-->
+    <footer id="all" class="videoContro" style="display: none;">
+        <div id="playProgress">
+            <i id="playtime"></i>
+        </div>
+        <label id="startTime">00:00:00</label>
+        <em id="endTime">00:00:00</em>
+    </footer>
+
+    <!-- video player -->
+    <div class="video-container" ng-controller="VideoController"></div>
+    <!-- Plugins -->
+    <object id="pluginPlayer" border=0 classid="clsid:SAMSUNG-INFOLINK-PLAYER"></object>
+    <object id="pluginAudio" border=0 classid="clsid:SAMSUNG-INFOLINK-AUDIO"></object>
+    <object id="pluginObjectTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
+    <object id="pluginSef" border=0 classid="clsid:SAMSUNG-INFOLINK-SEF"></object>
+    <!-- Common API -->
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+
+    <script type="text/javascript" language="javascript" src="modules/mock.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!--<script src="bower_components/angular/angular-route.min.js"></script>-->
+    <script src="modules/activity.js"></script>
+    <script src="modules/alarm.js"></script>
+    <script src="modules/app.js"></script>
+    <script src="modules/bill.js"></script>
+    <script src="modules/dnd.js"></script>
+    <script src="modules/index.js"></script>
+    <script src="modules/live.js"></script>
+    <script src="modules/menu.js"></script>
+    <script src="modules/movie.js"></script>
+    <script src="modules/music.js"></script>
+    <script src="modules/message.js"></script>
+    <script src="modules/order.js"></script>
+    <script src="modules/tpl_order_list.js"></script>
+    <script src="modules/resource.js"></script>
+    <script src="modules/toolbar.js"></script>
+    <script src="modules/tpl_category_list.js"></script>
+    <script src="modules/tpl_pic_text_category.js"></script>
+    <script src="modules/tpl_pic_text_simple.js"></script>
+    <script src="modules/tpl_text.js"></script>
+    <script src="modules/tpl_text_detail.js"></script>
+    <script src="modules/video.js"></script>
+    <script src="modules/weather.js"></script>
+    <script src="modules/weather_detail.js"></script>
+    <script src="modules/welcome.js"></script>
+    <script src="modules/tpl_weather_list.js"></script>
+    <script src="modules/lang/zh-CN.js"></script>
+    <script src="modules/lang/en-US.js"></script>
+    <script src="modules/tpl_shopping_cart.js"></script>
+    <script src="modules/room.js"></script>
+    <script src="modules/test.js"></script>
+</body>
+
+</html>

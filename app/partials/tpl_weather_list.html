@@ -1,0 +1,20 @@
+<div ng-controller="TplWeatherListController" class="tpl-category-list-content">
+    <div class="content-header">{{weather.city_list}}</div>
+    <div class="content-main">
+        <div class="weather-list-container">
+        <ul class="weather-menu-list" ng-style="{top: listTopStyle + 'px'}">
+            <li ng-repeat="item in firstList" ng-class="{'selected': $index==selectedIndex}">
+                <span>{{item}}</span>
+            </li>
+        </ul>
+        </div>
+        <div class="weather-preview">
+            <ul class="city-list" ng-style="{top: listTopStyle2 + 'px'}">
+                <li ng-repeat="city in cities track by $index" ng-class="{'selected': $index==selectedCityIndex}">
+                    <span>{{city}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <toolbar items="weather_ok|back"></toolbar>
+</div>

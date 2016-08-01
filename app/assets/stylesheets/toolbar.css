@@ -1,0 +1,83 @@
+
+/* toolbar */
+
+.toolbar:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.toolbar {
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.toolbar .center, .toolbar li {
+    height: 36px;
+    font-size: 22px;
+}
+
+.toolbar .center:before, .toolbar li:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.toolbar .center>img, .toolbar li>img {
+    height: 70%;
+    max-height: 100%;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+.toolbar .ng-binding {
+    font-size: 22px;
+}
+
+.toolbar>.left {
+    float: left;
+    width: 388px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.toolbar>.left li {
+    float: left;
+}
+
+.toolbar>.right li {
+    float: right;
+}
+
+.toolbar>.right {
+    float: left;
+    width: 388px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.toolbar>.center {
+    float: left;
+    width: 360px;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.toolbar>.center>.button-menu {
+    display: inline-block;
+    width: 82px;
+    background: url("../images/ic_button.png") no-repeat 0;
+    background-size: 82px;
+    text-align: center;
+}
+
+.toolbar>.center>.button-menu.selected {
+    background: url("../images/ic_button_active.png") no-repeat 0;
+    background-size: 82px;
+}
+
+.toolbar>.center>.button-menu>span {
+    font-size: 18px;
+}

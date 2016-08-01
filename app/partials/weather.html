@@ -1,0 +1,40 @@
+<div ng-controller="WeatherController" class="weather-content">
+    <div class="content-header" style="padding: 0;width: 100%"><span style="text-align: right;padding-right: 50px">{{weather.title}}</span></div>
+    <div class="content-main">
+        <div class="weather-top">
+            <span class="weather-title">{{content.City}}</span>
+            <span class="weather-title">{{}}</span>
+            <div class="button-confirm" ng-class="{'active': select=='list'}"><span>{{weather.city_list}}</span></div>
+        </div>
+        <div class="weather-content">
+            <div class="weather-days">
+                <div class="weather-icon">
+                    <img ng-src="assets/images/weather/{{content.WeatherID_1}}.png">
+                </div>
+                <p class="weather-days-title">{{content.TempDes_Low_1}}&nbsp;-&nbsp;{{content.TempDes_1}}℃</p>
+                <p class="weather-days-bottom">{{content.WeatherDes_1}}</p>
+                <p class="weather-days-bottom">{{content.WindDirect_1}}</p>
+                <p class="weather-days-bottom">{{weather.day1}}</p>
+            </div>
+            <div class="weather-days">
+                <div class="weather-icon">
+                    <img ng-src="assets/images/weather/{{content.WeatherID_2}}.png">
+                </div>
+                <p class="weather-days-title">{{content.TempDes_Low_2}}&nbsp;-&nbsp;{{content.TempDes_2}}℃</p>
+                <p class="weather-days-bottom">{{content.WeatherDes_2}}</p>
+                <p class="weather-days-bottom">{{content.WindDirect_2}}</p>
+                <p class="weather-days-bottom">{{weather.day2}}</p>
+            </div>
+            <div class="weather-days">
+                <div class="weather-icon">
+                    <img ng-src="assets/images/weather/{{content.WeatherID_3}}.png">
+                </div>
+                <p class="weather-days-title">{{content.TempDes_Low_3}}&nbsp;-&nbsp;{{content.TempDes_3}}℃</p>
+                <p class="weather-days-bottom">{{content.WeatherDes_3}}</p>
+                <p class="weather-days-bottom">{{content.WindDirect_3}}</p>
+                <p class="weather-days-bottom">{{weather.day3}}</p>
+            </div>
+        </div>
+    </div>
+    <toolbar items="weather_open|back"></toolbar>
+</div>

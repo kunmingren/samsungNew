@@ -1,0 +1,84 @@
+
+.movie-type {
+    background: url("../images/bg_movie_left.png") no-repeat;
+    height: 460px;
+    width: 300px;
+    float: left;
+    margin: 25px 0px 25px 35px;
+}
+
+.movie {
+    background: url("../images/bg_movie_right.png") no-repeat;
+    height: 460px;
+    width: 750px;
+    float: right;
+    margin: 25px 35px 25px 0px;
+}
+
+.movie-type-list>li {
+    height: 36px;
+    line-height: 36px;
+    width: 280px;
+    margin: 5px 10px;
+}
+
+.movie-type-list>li.selected {
+    background: url("../images/bg_category_lsit_selected.png") 0 0 no-repeat;
+    background-size: 280px 36px;
+}
+
+.movie-list {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.movie-list>li>ul>li.selected {
+    background: url("../images/bg_movie_right.png") 0 0 no-repeat;
+    background-size: 170px 160px;
+}
+
+.movie-list>li>ul>li {
+    float: left;
+    width: 160px;
+    height: 150px;
+    padding: 5px;
+}
+
+.movie-list>li>ul>li>img {
+    width: 100px;
+    height: 120px;
+}
+
+.movie-list>li>ul>li>span {
+    display: block;
+}
+
+.videoContro {
+    position: absolute;
+    bottom: 100px;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+#playProgress {
+    width: 800px;
+    height: 10px;
+    float: left;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: 5px;
+}
+
+#playtime {
+    height: 5px;
+    background-color: white;
+    display: block;
+    margin-top: 3px;
+}
+#endTime {
+    float: right;
+}

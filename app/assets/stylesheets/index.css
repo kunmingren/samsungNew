@@ -1,0 +1,66 @@
+
+/* index styles */
+
+.welcome-content {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 67px;
+}
+
+/* index page */
+.index-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.index-guest-name {
+    font-size: 54px;
+    padding: 35px 35px 10px;
+}
+
+.index-welcome-text {
+    font-size: 38px;
+    margin: -8px 0 8px 0;
+}
+
+.index-sub-welcome-text {
+    font-size: 36px;
+    line-height: 140%;
+    width: 900px;
+    white-space: pre-line;
+    word-break: normal;
+    left: 50%;
+    margin-left: -450px;
+    position: absolute;
+}
+
+.index-room-number {
+    font-size: 54px;
+    padding: 10px 30px 40px;
+}
+
+.index-room-language {
+    position: absolute;
+    width: 100%;
+    top: 380px;
+}
+
+.index-room-language>i {
+    display: inline-block;
+    width: 175px;
+    height: 60px;
+    margin: -12px 40px 10px 40px;
+    line-height: 60px;
+    font-size: 32px;
+    background: url("../images/ic_button.png");
+    background-size: 175px 60px;
+}
+
+.index-room-language>i.active {
+    background: url("../images/ic_button_active.png");
+    background-size: 175px 60px;
+}
+
+.index-language-hint {
+    font-size: 22px;
+}
