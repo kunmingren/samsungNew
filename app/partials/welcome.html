@@ -1,11 +1,15 @@
 <div ng-controller="WelcomeController" class="welcome-content">
-    <p class="index-guest-name">{{guestName}}</p>
-    <p class="index-welcome-text">{{welcomeText}}</p>
-    <pre class="index-sub-welcome-text">{{subWelcomeText}}</pre>
+    <div class="logo"><img src="assets/images/logo.png" width="100px" height="83.3px"></div>
+    <div class="welcome-text-container">
+        <p class="welcome-title">{{guestNameText}}<span class="guest-name">{{guestName}}</span></p>
+        <p class="welcome-text">{{welcomeText}}</p>
+    </div>
     <div class="index-room-language">
-        <p class="index-room-number">{{roomNumber}}</p>
         <i ng-class="{'active': language=='zh-CN'}">中文</i>
+        <i style="margin-top: 12px"><img src="assets/images/gap.png" height="21.3px"> </i>
         <i ng-class="{'active': language=='en-US'}">English</i>
-        <p class="index-language-hint">{{cue}}</p>
+        <span class="press">
+            {{press1}}<i style="margin-top: 12px;width: 34.7px;display: inline-block;vertical-align: baseline"><img src="assets/images/menu.png" height="34.7px"> </i>{{press2}}
+        </span>
     </div>
 </div>

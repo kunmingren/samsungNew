@@ -1,59 +1,27 @@
-
 /* body */
-
 body {
-    background: url("../images/bg_window.jpg") no-repeat;
+    background: url("../images/bg_window.png") no-repeat;
 }
-
-/* activity stack */
-
-.activity-stack-container {
+/*welcome page*/
+.logo{
     position: absolute;
-    left: 0;
-    right: 0;
-    width: 1280px;
-    height: 720px;
+    left: 12px;
+    top: 27px;
 }
-
-.include-content.menu-visible {
-    background: url("../images/bg_activity_with_menu.png") no-repeat 0 0;
-    background-size: 1136px 636px;
+.welcome-text-container{
+    font-family: 宋体b8b\4f53;
+    width: 936px;
+    padding: 0 172px;
 }
-
-.activity-stack-container>li:first-child>.include-content {
-    background: url("../images/bg_activity_index.png") no-repeat 0 0 ;
-    background-size: 1136px 606px;
+.welcome-title{
+    color: #FFD38B;
+    font-size: 32px;
 }
-
-.include-content {
-    background: url("../images/bg_activity.png") no-repeat 0 0;
-    background-size: 1136px 618px;
-    position: absolute;
-    top: 48px;
-    left: 72px;
-    width: 1136px;
-    height: 636px;
-    color: #ffffff;
+.guest-name{
+    font-size: 38px;
 }
-
-.include-content>div>.content-header {
-    width: calc(100% - 50px);
-    height: 63px;
-    margin-bottom: 4px;
-    text-align: right;
-    line-height: 62px;
-    font-size: 36px;
-    /*letter-spacing: 20px;*/
-    padding-right: 50px;
-}
-
-.include-content>div>.content-main {
-    width: 100%;
-    height: 510px;
-    margin-bottom: 4px;
-}
-
-.include-content>div>.content-footer {
-    width: 100%;
-    height: 36px;
+.welcome-text{
+    font-size: 32px;
+    margin-top: 23.3px;
+    line-height: 42.7px;
 }

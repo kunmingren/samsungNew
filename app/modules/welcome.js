@@ -15,16 +15,18 @@ angular.module('app.welcome', [])
                 ResourceManager.setLocale($scope.language);
                 i18nText = ResourceManager.getLocale();
             }
-            $scope.guestName = i18nText.index.guestName + res.getString("guest_name");
+            $scope.guestNameText = i18nText.index.guestName;
+            $scope.guestName = res.getString("guest_name");
             //$scope.welcomeText = '欢迎您来到东方滨江大酒店';
             //$scope.subWelcomeText = [
             //    '您好！衷心欢迎阁下光临东方滨江大酒店',
             //    '我们愿始终如一的为阁下提供优质的产品和服务',
             //    '使每一位宾客宾至如归，令阁下倍感尊崇之礼遇']
             //    .join('\n');
-            $scope.subWelcomeText = res.getString("welcome_text").replace(/，|。|,|\./g, "\n");
+            $scope.welcomeText = i18nText.welcome.welcome_text;
             $scope.roomNumber = i18nText.index.roomNumber + window.localStorage.room;
-            $scope.cue = i18nText.welcome.cue;
+            $scope.press1 = i18nText.welcome.press1;
+            $scope.press2 = i18nText.welcome.press2;
         });
         var languages = ['zh-CN', 'en-US'],
             languageIndex = 0;
@@ -38,8 +40,7 @@ angular.module('app.welcome', [])
                     ResourceManager.setLocale($scope.language);
                     break;
                 case COMMON_KEYS.KEY_ENTER:
-                    $scope.$emit('menu.created', true);
-                    ActivityManager.startActivity('index');
+                    ActivityManager.startActivity('menu');
                     break;
                 case COMMON_KEYS.KEY_UP:
                     ActivityManager.startActivity('test');

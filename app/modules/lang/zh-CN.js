@@ -5,7 +5,10 @@ angular.module('app.zh-CN', [])
         return {
             lang:'zh-CN',
             welcome: {
-                cue: '根据您的语言习惯选择使用的语言系统'
+                cue: '根据您的语言习惯选择使用的语言系统',
+                welcome_text:'欢迎来到希尔顿酒店！我们将为您提供温馨舒适的客房、美味可口的佳肴、现代齐全的设施设备和尽善尽美的服务。感谢您对我们的支持，期待您的光临！',
+                press1:'按',
+                press2:'进入'
             },
             index: {
                 guestName: '尊敬的 ',

@@ -1,60 +1,44 @@
+/**
+ * Created by 83471 on 2016/8/2.
+ */
 'use strict';
-
-angular.module('app', [
+angular.module('app',[
     'app.activity',
     'app.resource',
-    'app.toolbar',
-    'app.menu',
-    'app.room',
     'app.welcome',
-    'app.index',
-    'app.alarm',
-    'app.dnd',
-    'app.bill',
-    'app.live',
-    'app.order',
-    'app.movie',
-    'app.music',
-    'app.message',
-    'app.video',
-    'app.weather',
-    'app.weather_detail',
     'app.zh-CN',
     'app.en-US',
-    'app.tpl_category_list',
-    'app.tpl_order_list',
-    'app.tpl_shopping_cart',
-    'app.tpl_pic_text_category',
-    'app.tpl_pic_text_simple',
-    'app.tpl_text',
-    'app.tpl_text_detail',
-    'app.tpl_weather_list',
-    'app.test',
+    'app.room'
 ])
-    .run(['$rootScope', '$http', 'ActivityManager', 'ResourceManager', function ($rootScope, $http, ActivityManager, ResourceManager) {
+    .run(['$rootScope', '$http', 'ActivityManager','ResourceManager', function ($rootScope, $http, ActivityManager,ResourceManager) {
 
+                //判断localStorage中房间号是否存在，不存在则跳转至home页面设置房间号
+                //if(!window.localStorage.room){
+                //    ActivityManager.startActivity('room');
+                //}else {
+                //    ActivityManager.startActivity('welcome');
+                //}
         // 获取主配置文件
         var cfg = ResourceManager.getConfigurations();
         $http.get(cfg.mainConfigUrl()).success(function (mainJSON) {
 
-                // 获取目录配置文件
-                var menuConfigUrl = cfg.serverUrl() + mainJSON.MainView_Json_URL;
-                $http.get(menuConfigUrl).success(function (menuJSON) {
-                    ResourceManager.initialize(typeof mainJSON === 'string' ? JSON.parse(mainJSON) : mainJSON,
-                        typeof menuJSON === 'string' ? JSON.parse(menuJSON) : menuJSON);
+            // 获取目录配置文件
+            var menuConfigUrl = cfg.serverUrl() + mainJSON.MainView_Json_URL;
+            $http.get(menuConfigUrl).success(function (menuJSON) {
+                ResourceManager.initialize(typeof mainJSON === 'string' ? JSON.parse(mainJSON) : mainJSON,
+                    typeof menuJSON === 'string' ? JSON.parse(menuJSON) : menuJSON);
 
-                    //判断localStorage中房间号是否存在，不存在则跳转至home页面设置房间号
-                    if(!window.localStorage.room){
-                        ActivityManager.startActivity('room');
-                    }else {
-                        ActivityManager.startActivity('welcome');
-                    }
-                });
+                //判断localStorage中房间号是否存在，不存在则跳转至home页面设置房间号
+                if(!window.localStorage.room){
+                    ActivityManager.startActivity('room');
+                }else {
+                    ActivityManager.startActivity('welcome');
+                }
+            });
         });
 
     }])
-    .controller('RootController', ['$scope', 'ActivityManager', 'COMMON_KEYS', function ($scope, ActivityManager, COMMON_KEYS) {
-
+        .controller('RootController',['$scope', 'ActivityManager', 'COMMON_KEYS', function ($scope, ActivityManager, COMMON_KEYS) {
         /* browser environment */
         var keyMapping = {
             37: COMMON_KEYS.KEY_LEFT,
@@ -85,8 +69,6 @@ angular.module('app', [
             keyMapping[tvKey.KEY_MUTE] = COMMON_KEYS.KEY_MUTE;
         }
 
-        $scope.showMenu = false;
-
         $scope.onkeydown = function (ev) {
             var key = keyMapping[ev.keyCode];
             if (key === COMMON_KEYS.KEY_MENU) {
@@ -112,17 +94,6 @@ angular.module('app', [
         }
 
         $scope.activityStack = ActivityManager.getActivityStack();
-
-        $scope.$on('activity.created', function (ev) {
-            $scope.showMenu = false;
-            $scope.$broadcast('menu.toggle', !$scope.showMenu);
-            $scope.$broadcast('menu.menu', $scope.showMenu);
-        });
-
-        $scope.$on('menu.created', function (ev) {
-            $scope.$broadcast('menu.load', true);
-        });
-
     }])
     .constant('COMMON_KEYS', {
         KEY_LEFT    : 0,
