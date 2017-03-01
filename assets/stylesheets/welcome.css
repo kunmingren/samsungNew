@@ -1,0 +1,74 @@
+.welcome-content {
+    width: 1280px;
+    height: 720px;
+    background-size: 1280px;
+}
+
+.index-room-language {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+.welcome-text-container {
+    width: 936px;
+    padding: 0 172px;
+    margin-top: 211.3px;
+    float: left;
+}
+
+.logo {
+    position: absolute;
+    left: 32px;
+    top: 18px;
+}
+
+.welcome-title {
+    color: #FFD38B;
+    font-size: 32px;
+}
+
+.guest-name {
+    font-size: 38px;
+}
+
+.welcome-text {
+    font-size: 32px;
+    margin-top: 23.3px;
+    line-height: 42.7px;
+    color: #ffffff;
+    text-indent: 2em;
+}
+
+.index-room-language {
+    position: absolute;
+    left: 32px;
+    bottom: 20.7px;
+    font-size: 21.3px;
+    color: #ffffff;
+    width: 100%;
+}
+
+.index-room-language > i {
+    font-style: normal;
+}
+
+.index-room-language > i.active {
+    color: #FFD58F;
+}
+
+.press {
+    position: absolute;
+    right: 64px;
+    bottom: 0;
+}
+
+.tip_img {
+    margin: 0 5px;
+    position: relative;
+    top: 8px;
+    height: 34.7px;
+    width: 34.7px;
+    display: inline-block;
+    vertical-align: baseline
+}

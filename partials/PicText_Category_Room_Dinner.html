@@ -1,0 +1,43 @@
+<div ng-controller="FoodController" class="movie-content">
+    <!--<div class="logo"><img src="assets/images/logo.png" width="100px" height="83.3px"></div>-->
+    <div class="movie-item-container">
+        <div id="service-detail-container">
+            <div class="movie-head">
+                <img class="movie-icon" src="{{iconUrl}}">
+                <p class="movie-text">{{serviceName}}</p>
+            </div>
+            <div class="food-list-container">
+                <div class="list-container" ng-style="{left: listRightStyle + 'px'}">
+                    <span ng-repeat="item in foods" class="food-title" ng-class="{'food-selected': selectIndex==$index}">{{item.name}}</span>
+                </div>
+            </div>
+            <div class="food-detail-container">
+                <img src="{{food.img}}" class="food-detail-img">
+                <div class="food-content-right">
+                    <p class="food-detail-title">{{food.name}}</p>
+                    <p class="food-detail-intro">{{food.introduce}}</p>
+                    <span class="food-detail-price">{{money}}{{food.price}}</span>
+                    <span class="food-btn food-btn-sub">-</span>
+                    <span class="food-btn food-btn-number">{{pieces}}</span>
+                    <span class="food-btn food-btn-add">+</span>
+                    <div class="food-btn food-btn-submit">{{addText}}</div>
+                    <div class="btn_border" ng-hide="LEVEL==1" id="food_border" style="height: 64px;width: 55px;right: 3px;top:261px;"></div>
+                </div>
+            </div>
+
+        <div class="toolbar">
+        <span class="toolbar-select">
+            {{select.left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}
+        </span>
+            <span>|</span>
+        <span class="toolbar-ok">
+            {{ok.left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}
+        </span>
+            <!--<span>|</span>-->
+        <!--<span class="toolbar-back">-->
+            <!--{{menu.left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}-->
+        <!--</span>-->
+        </div>
+    </div>
+</div>
+    </div>

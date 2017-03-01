@@ -1,0 +1,61 @@
+.moveUp{
+     animation: moveup 0.75s forwards;
+     -moz-animation: moveup 0.75s forwards;	/* Firefox */
+     -webkit-animation: moveup 0.75s forwards;	/* Safari 和 Chrome */
+     -o-animation: moveup 0.75s forwards;
+ }
+
+@keyframes moveup
+{
+    from {top:49px}
+    to {top: 140px}
+}
+
+@-moz-keyframes moveup /* Firefox */
+{
+    from {top:49px}
+    to {top: 140px}
+}
+
+@-webkit-keyframes moveup /* Safari 和 Chrome */
+{
+    from {top:49px}
+    to {top: 140px}
+}
+
+@-o-keyframes moveup /* Opera */
+{
+    from {top:49px}
+    to {top: 140px}
+}
+
+.moveDown{
+    animation: movedown 0.75s forwards;
+    -moz-animation: movedown 0.75s forwards;	/* Firefox */
+    -webkit-animation: movedown 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: movedown 0.75s forwards;
+}
+
+@keyframes movedown
+{
+    from {top:140px}
+    to {top: 49px}
+}
+
+@-moz-keyframes movedown /* Firefox */
+{
+    from {top:140px}
+    to {top: 49px}
+}
+
+@-webkit-keyframes movedown /* Safari 和 Chrome */
+{
+    from {top:140px}
+    to {top: 49px}
+}
+
+@-o-keyframes movedown /* Opera */
+{
+    from {top:140px}
+    to {top: 49px}
+}

@@ -1,0 +1,69 @@
+
+/* index styles */
+
+.welcome-content {
+    color: #ffffff;
+    margin-top: 220px;
+}
+
+/* index page */
+.index-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.index-guest-name {
+    font-size: 54px;
+    padding: 35px 35px 10px;
+}
+
+.index-welcome-text {
+    font-size: 38px;
+    margin: -8px 0 8px 0;
+}
+
+.index-sub-welcome-text {
+    font-size: 36px;
+    line-height: 140%;
+    width: 900px;
+    white-space: pre-line;
+    word-break: normal;
+    left: 50%;
+    margin-left: -450px;
+    position: absolute;
+}
+
+.index-room-number {
+    font-size: 54px;
+    padding: 10px 30px 40px;
+}
+
+.index-room-language {
+    font-family: 宋体b8b\4f53;
+    position: absolute;
+    width: 1280px;
+    bottom: 21.3px;
+    left: 12px;
+}
+
+.index-room-language>i {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21.3px;
+}
+
+.index-room-language>i.active {
+    color: #FFD58F;
+}
+
+.press{
+    position: absolute;
+    right: 32px;
+    height:34.7px;
+    line-height: 34.7px;
+}
+
+.index-language-hint {
+    font-size: 22px;
+}

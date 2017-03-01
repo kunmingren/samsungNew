@@ -1,0 +1,54 @@
+<div ng-controller="WakeUpController" class="movie-content">
+    <div class="service-item-container">
+        <div class="service-item-title">{{data.name}}</div>
+        <div class="service-item-content">
+            <img src="{{data.pic}}" class="service-item-img">
+            <div class="service-item-text">
+                <p class="">{{data.intro}}</p>
+                <!--<p class="service-item-subtext">咨询电话：021-12345678</p>-->
+                <div style="position: relative">
+                    <div class="service-item-btn clock-btn" ng-show="!selected"  data-reveal-id="myModal" data-animation="fade">{{other}}</div>
+                    <div class="service-item-btn time-btn" ng-show="selected"  data-reveal-id="myModal" data-animation="fade">{{timeStr}}</div>
+                    <div class="service-item-btn submit-btn" ng-show="selected">{{submitText}}</div>
+                    <div class="btn_border" style="height: 60px;width: 440px;right: 19px;"></div>
+                </div>
+            </div>
+            <div id="myModal" class="reveal-modal">
+                <div class="toast-title">{{timeStr}}</div>
+                <div class="toast-content-container">
+                        <span class="toast-content-item">
+                            <p class="toast-content-title">{{monthText}}</p>
+                            <p class="toast-content-main" id="time-month">{{month}}</p>
+                        </span>
+                        <span class="toast-content-item">
+                            <p class="toast-content-title">{{dayText}}</p>
+                            <p class="toast-content-main" id="time-day">{{day}}</p>
+                        </span>
+                        <span class="toast-content-item">
+                            <p class="toast-content-title">{{hourText}}</p>
+                            <p class="toast-content-main" id="time-hour">{{hour}}</p>
+                        </span>
+                        <span class="toast-content-item">
+                            <p class="toast-content-title">{{minuteText}}</p>
+                            <p class="toast-content-main" id="time-minute">{{minute}}</p>
+                        </span>
+                    <div id="time_border"></div>
+                </div>
+                <a class="close-reveal-modal"></a>
+            </div>
+        </div>
+        <div class="toolbar">
+        <span class="toolbar-select">
+            {{select.left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}
+        </span>
+            <span>|</span>
+        <span class="toolbar-ok">
+            {{ok.left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}
+        </span>
+            <!--<span>|</span>-->
+        <!--<span class="toolbar-back">-->
+            <!--{{menu.left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}-->
+        <!--</span>-->
+        </div>
+    </div>
+</div>

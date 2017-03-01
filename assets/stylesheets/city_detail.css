@@ -1,0 +1,49 @@
+.city-detail-title{
+    opacity: 0.89;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 0 30px;
+}
+.city-detail-container{
+    margin-top: 20px;
+    height: 470px;
+    width: 1280px;
+    color: #575C82;
+    padding: 0 30px;
+}
+.city-detail-big{
+    width: 705px;
+    height: 470px;
+    float: left;
+}
+.city-detail-right{
+    width: 460px;
+    margin-left: 47px;
+    float: left;
+}
+.city-detail-text{
+    height: 200px;
+    float: left;
+    opacity: 0.89;
+    font-size: 24px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.city-detail-small{
+    width: 320px;
+    height: 213px;
+    margin-top: 24px;
+}
+.city-detail-subtext{
+    opacity: 0.89;
+    font-size: 18.66px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    margin-top: 8px;
+}
+.city-detail-subtext:before{
+    content: url("../images/circle.png");
+}

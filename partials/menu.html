@@ -1,0 +1,31 @@
+<div ng-controller="MenuController" class="menu-content">
+    <div class="logo"><img ng-src="{{logo}}"></div>
+    <div class="menu-item-container">
+        <ul id="menu-item-list" ng-style="{left: menuStyleLeft, width: menuStyleWidth}">
+            <li ng-repeat="menuItem in menuItems" ng-class="{'selected': selectedMenuItemIndex==$index}" repeat-finish="menuFinish();">
+                <div class="menu-item-unit">
+                    <img ng-src="{{menuItem.pic}}">
+                    <img ng-src="{{menuItem.icon}}">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="subtitle">
+        <marquee direction="left" behavior="scroll" scrollamount="5" scrolldelay="0" loop="3" width="1000" height="50" hspace="140" vspace="10">
+            尊敬的客人您好，酒店二楼风尚美食餐厅正提供免费的下午茶和咖啡，有需要的客人请持房卡前往就餐。
+        </marquee>
+    </div>
+    <!--<div class="toolbar">-->
+        <!--<span class="toolbar-select">-->
+            <!--{{left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}-->
+        <!--</span>-->
+        <!--<span>|</span>-->
+        <!--<span class="toolbar-ok">-->
+            <!--{{left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}-->
+        <!--</span>-->
+        <!--&lt;!&ndash;<span>|</span>&ndash;&gt;-->
+        <!--&lt;!&ndash;<span class="toolbar-back">&ndash;&gt;-->
+            <!--&lt;!&ndash;{{left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}&ndash;&gt;-->
+        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+    <!--</div>-->
+</div>

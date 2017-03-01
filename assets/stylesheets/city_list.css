@@ -1,0 +1,48 @@
+.city-list-img{
+    height: 513px;
+    width: 342px;
+    float: left;
+    margin-left: 30px;
+}
+.city-ul-container{
+    height: 500px;
+    width: 878px;
+    overflow: hidden;
+}
+.city-list-container{
+    float: left;
+    width: 847px;
+    position: relative;
+    left: 27px;
+}
+.city-item{
+    line-height: 59px;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 28px;
+    padding: 0 10px;
+}
+.city-item-title{
+    height: 40px;
+    color: #ffffff;
+    font-size: 30.7px;
+    position: relative;
+    left: 27px;
+}
+.list-selected{
+    opacity: 0.89;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 9px 0px rgba(0,0,0,0.50);
+    border-radius: 6.66px;
+    color: #20212A;
+    font-weight: 400;
+}
+.list-selected:after{
+    content: url("../images/arrow_right.png");
+    position: relative;
+    top: 3px;
+}
+.city-text-container{
+    width: 790px;
+    display: inline-block;
+}

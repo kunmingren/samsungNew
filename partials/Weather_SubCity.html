@@ -1,0 +1,56 @@
+<div ng-controller="WeatherController" class="movie-content">
+    <!--<div class="logo"><img src="assets/images/logo.png" width="100px" height="83.3px"></div>-->
+    <div class="movie-item-container">
+        <div id="service-detail-container">
+            <div class="movie-head">
+                <img class="movie-icon" src="{{iconUrl}}">
+                <p class="movie-text">天气查询</p>
+            </div>
+            <div class="weather-left-container">
+                <div class="weather-list-container">
+                    <span class="weather-title" ng-class="{'item-selected': outside==false}">{{cityIn}}</span>
+                    <span class="weather-title" ng-class="{'item-selected': outside==true}">{{cityOut}}</span>
+                </div>
+                <ul class="weather-city-list">
+                    <li ng-repeat="city in citys" class="city-list">
+                        <span  ng-class="{'city-selected': selectedIndex==$index}" class="weather_name">{{city.name}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="weather-content-container">
+                <div class="weather-content">
+                    <p class="content-title">{{city.date_today}}</p>
+                    <div><img src="assets/weather/{{city.icon_today}}.png" class="weather-img"/></div>
+                    <p class="content-title weather-bot">{{city.weather_today}}</p>
+                    <p class="content-title">{{city.temp_today}}</p>
+                </div>
+                <div class="weather-content">
+                    <p class="content-title">{{city.date_tomorrow}}</p>
+                    <div><img src="assets/weather/{{city.icon_tomorrow}}.png" class="weather-img"/></div>
+                    <p class="content-title weather-bot">{{city.weather_tomorrow}}</p>
+                    <p class="content-title">{{city.temp_today}}</p>
+                </div>
+                <div class="weather-content">
+                    <p class="content-title">{{city.date_third}}</p>
+                    <div><img src="assets/weather/{{city.icon_third}}.png" class="weather-img"/></div>
+                    <p class="content-title weather-bot">{{city.weather_third}}</p>
+                    <p class="content-title">{{city.temp_today}}</p>
+                </div>
+            </div>
+
+            <div class="toolbar">
+            <span class="toolbar-select">
+                {{select.left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}
+            </span>
+                <span>|</span>
+            <span class="toolbar-ok">
+                {{ok.left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}
+            </span>
+                <!--<span>|</span>-->
+            <!--<span class="toolbar-back">-->
+                <!--{{menu.left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}-->
+            <!--</span>-->
+            </div>
+        </div>
+    </div>
+</div>

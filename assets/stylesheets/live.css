@@ -1,0 +1,79 @@
+.Live-content {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+
+.live-list {
+    overflow: hidden;
+    position: relative;
+}
+
+.live-list-prospect {
+    background: url("../images/live_shadow.png") no-repeat;
+    position: absolute;
+    z-index: 1;
+    width: 371px;
+    height: 720px;
+    left: -20px;
+}
+
+.live-item-list {
+    color: #ffffff;
+    width: 371px;
+    position: relative;
+}
+
+.live-item-list > li.selected {
+    height: 100px;
+    line-height: 100px;
+}
+
+.live-item-list > li {
+    height: 80px;
+    line-height: 80px;
+}
+
+.live-item-list > li.selected >.live-item-icon {
+    height: 100px;
+    margin-left: 20px;
+    width: 120px;
+}
+
+.live-item-list > li >.live-item-icon {
+    height: 80px;
+    float: left;
+    width: 100px;
+    margin-left: 60px;
+    text-align: center;
+}
+
+.live-item-list > li.selected > .live-item-icon > img {
+    position: relative;
+    height: 60px;
+    max-width: 120px;
+}
+
+.live-item-list > li > .live-item-icon > img {
+    position: relative;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.live-item-list > li.selected > label {
+    position: relative;
+    left: 5px;
+    font-size: 25px;
+    max-height: 100px;
+    text-align: center;
+    width: 150px;
+}
+
+.live-item-list > li > label {
+    position: relative;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    float: left;
+}

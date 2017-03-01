@@ -1,0 +1,22 @@
+<div ng-controller="LiveController" class="live-content">
+    <div class="content-header"></div>
+    <div class="content-main">
+        <div class="channel-header">
+            <span class="channel-title">{{title}}</span>
+            <span class="channel-pager">{{(currentPage + 1) + '/' + totalPage}}</span>
+        </div>
+        <div class="channel-list-container" ng-class="{'left-arrow': currentPage>0, 'right-arrow': currentPage<totalPage-1}">
+        <ul class="channel-list">
+            <li ng-repeat="column in channels">
+                <ul>
+                   <li ng-repeat="item in column" ng-class="{'selected': item.index==selectedIndex}">
+                       {{(item.index + 1) + '.' + item.name}}
+                       <!--<img src="{{item.icon}}">-->
+                   </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <toolbar items="ok|back"></toolbar>
+</div>

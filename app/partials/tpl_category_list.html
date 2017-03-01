@@ -1,0 +1,19 @@
+<div ng-controller="TplCategoryListController" class="tpl-category-list-content">
+    <div class="content-header">{{title}}</div>
+    <div class="content-main">
+        <div class="category-list-container">
+        <ul class="category-list" ng-style="{top: listTopStyle + 'px'}">
+            <li ng-repeat="category in categories" ng-class="{'selected': $index==selectedIndex}">
+                <span>{{category.name}}</span>
+            </li>
+        </ul>
+        </div>
+        <div class="category-preview">
+            <div class="category-preview-image-container">
+                <img ng-src="{{categories[selectedIndex].previewImage}}">
+            </div>
+            <p>{{categories[selectedIndex].previewText}}</p>
+        </div>
+    </div>
+    <toolbar items="ok|back"></toolbar>
+</div>

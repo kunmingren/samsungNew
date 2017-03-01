@@ -1,0 +1,20 @@
+<div ng-controller="TplTextController" class="tpl-text-content">
+    <div class="content-header">{{title}}</div>
+    <div class="content-main">
+        <div class="text-list-container" ng-class="{'up-arrow': selectedIndex > 0, 'down-arrow': selectedIndex < texts.length - 1}">
+            <ul ng-style="{top: listTopStyle + 'px'}">
+                <li ng-repeat="item in texts" class="{'selected': $index==selectedIndex}">{{item.title}}</li>
+            </ul>
+        </div>
+        <div class="text-preview-pager-container">
+            当前页
+            <span class="text-preview-pager">{{currentPage}}/{{totalPage}}</span>
+        </div>
+        <div class="text-preview-container">
+            <pre ng-style="{top: (-currentPage * 0) + 'px'}">
+                {{texts[selectedIndex].content}}
+            </pre>
+        </div>
+    </div>
+    <toolbar items=ok|back"></toolbar>
+</div>

@@ -1,0 +1,33 @@
+<div ng-controller="CityListController" class="movie-content">
+    <!--<div class="logo"><img src="assets/images/logo.png" width="100px" height="83.3px"></div>-->
+    <div class="movie-item-container">
+        <div id="service-detail-container">
+            <div class="movie-head">
+                <img class="movie-icon" src="{{iconUrl}}">
+                <p class="movie-text">{{serviceName}}</p>
+            </div>
+            <img src="{{imgUrl}}" class="city-list-img">
+            <div class="city-item-title">{{aName}}（{{titleText}}）：</div>
+            <div class="city-ul-container">
+                <ul class="city-list-container" ng-style="{top: listTopStyle2 + 'px'}">
+                    <li ng-repeat="item in city" id="city{{$index}}" ng-class="{'list-selected': selectedIndex==$index}" class="city-item">
+                        <span class="city-text-container">{{$index+1}}  {{item.name}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="toolbar">
+        <span class="toolbar-select">
+            {{select.left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}
+        </span>
+            <span>|</span>
+        <span class="toolbar-ok">
+            {{ok.left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}
+        </span>
+            <!--<span>|</span>-->
+        <!--<span class="toolbar-back">-->
+            <!--{{menu.left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}-->
+        <!--</span>-->
+        </div>
+    </div>
+</div>

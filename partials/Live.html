@@ -1,0 +1,49 @@
+<div ng-controller="LiveController" class="Live-content">
+    <div class="currency-logo"><img ng-src="{{logoUrl}}"><span>{{name}}</span></div>
+    <div class="live-item-container">
+        <div class="live-list-prospect"></div>
+        <div class="live-list" ng-style="{top: listStyleTop}">
+            <div id="liveList0" >
+                <!-- 定义内容-->
+                <ul class="live-item-list">
+                    <li ng-repeat="item in channels">
+                        <div class="live-item-icon"><img ng-src="{{item.icon}}"></div>
+                        <label>{{item.name}}</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="liveList1">
+                <!-- 定义内容-->
+                <ul class="live-item-list">
+                    <li ng-repeat="item in channels" ng-class="{'selected': selectedIndex==$index}" repeat-finish="liveFinish();">
+                        <div class="live-item-icon"><img ng-src="{{item.icon}}"></div>
+                        <label>{{item.name}}</label>
+                    </li>
+                </ul>
+            </div>
+            <div id="liveList2">
+                <!-- 定义内容-->
+                <ul class="live-item-list">
+                    <li ng-repeat="item in channels">
+                        <div class="live-item-icon"><img ng-src="{{item.icon}}"></div>
+                        <label>{{item.name}}</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="toolbar Live-toolbar">
+        <!--<span class="toolbar-select">-->
+            <!--{{left}}<i class="tip_img toolbar-img"><img ng-src="{{select.icon}}" height="34.7px"> </i>{{select.right}}-->
+        <!--</span>-->
+        <!--<span>|</span>-->
+        <!--<span class="toolbar-ok">-->
+            <!--{{left}}<i class="tip_img toolbar-img"><img src="{{ok.icon}}" height="34.7px"> </i>{{ok.right}}-->
+        <!--</span>-->
+        <!--<span>|</span>-->
+        <!--<span class="toolbar-back">-->
+            <!--{{left}}<i class="tip_img toolbar-img"><img src="{{menu.icon}}" height="34.7px"> </i>{{menu.right}}-->
+        <!--</span>-->
+    </div>
+</div>
+

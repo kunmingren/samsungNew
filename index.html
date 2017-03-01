@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<?php  header('Access-Control-Allow-Origin:*'); ?>
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css" />
+    <link rel="stylesheet" href="assets/stylesheets/welcome.css" />
+    <link rel="stylesheet" href="assets/stylesheets/menu.css" />
+    <link rel="stylesheet" href="assets/stylesheets/movie.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/music.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/SecondMenu.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/live.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/wake_up.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/wash.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/reveal.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/city_list.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/city_detail.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/food.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/weather.css">
+</head>
+
+<body ng-app="app"  ng-keyup="onkeyup($event)" ng-keydown="onkeydown($event)" ng-controller="RootController">
+    <div class="loading">
+        <div class="load-container load5">
+            <div class="loader">Loading...</div>
+        </div>
+    </div>
+    <!-- view stack -->
+    <ul class="activity-stack-container">
+        <li ng-repeat="activity in activityStack" ng-show="$index==activityStack.length - 1 && !activity._hide">
+            <ng-include src="activity.templateUrl" class="include-content"></ng-include>
+        </li>
+    </ul>
+
+    <!-- video event -->
+    <div id="test" style="color:#fff; background-color: rgba(50,40,30,0.5);"></div>
+
+    <!--提示弹框-->
+    <div id="tipModal" class="reveal-modal-plus" style="display: none">
+        <div class="toast-content">
+        </div>
+        <a class="close-reveal-modal"></a>
+    </div>
+
+    <!-- Player Controller-->
+    <footer id="all" class="videoContro" style="display: none">
+        <div id="playProgress">
+            <i id="playtime"></i>
+        </div>
+        <label id="startTime">00:00:00</label>
+        <label id="endTime">00:00:00</label>
+    </footer>
+
+    <!-- Plugins -->
+    <object id="pluginPlayer" border=0 classid="clsid:SAMSUNG-INFOLINK-PLAYER"></object>
+    <object id="pluginAudio" border=0 classid="clsid:SAMSUNG-INFOLINK-AUDIO"></object>
+    <object id="pluginObjectTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
+    <object id="pluginSef" border=0 classid="clsid:SAMSUNG-INFOLINK-SEF"></object>
+    <!-- Common API -->
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Plugin.js"></script>
+    <!--<script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/webapi/1.0/webapis.js"></script>-->
+
+    <script type="text/javascript" language="javascript" src="modules/mock.js"></script>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <!--<script src="bower_components/angular/angular-route.min.js"></script>-->
+    <script src="bower_components/jquery-3.1.0.min.js"></script>
+    <script src="bower_components/jquery.reveal.js"></script>
+    <script src="modules/lang/zh-CN.js"></script>
+    <script src="modules/lang/en-US.js"></script>
+    <script src="modules/app.js"></script>
+    <script src="modules/welcome.js"></script>
+    <script src="modules/activity.js"></script>
+    <script src="modules/resource.js"></script>
+    <script src="modules/room.js"></script>
+    <script src="modules/menu.js"></script>
+    <script src="modules/Movie_Category_Secret.js"></script>
+    <script src="modules/Music.js"></script>
+    <script src="modules/SecondMenu.js"></script>
+    <script src="modules/live.js"></script>
+    <script src="modules/Wifi.js"></script>
+    <script src="modules/PicText_Category.js"></script>
+    <script src="modules/PicText_Category_Wash.js"></script>
+    <script src="modules/PicText_Category_City_Introduction.js"></script>
+    <script src="modules/city_detail.js"></script>
+    <script src="modules/PicText_Category_Room_Dinner.js"></script>
+    <script src="modules/Weather_thj.js"></script>
+</body>
+</html>

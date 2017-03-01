@@ -1,0 +1,15 @@
+<div ng-controller="WelcomeController" class="welcome-content"  ng-style="{'background-image': 'url('+poster+ ')'}">
+    <div class="logo"><img ng-src="{{logo}}"></div>
+    <div class="welcome-text-container">
+        <p class="welcome-title">{{guestNameText}}<span class="guest-name">{{guestName}}</span></p>
+        <p class="welcome-text">{{welcomeText}}</p>
+    </div>
+    <div class="index-room-language">
+        <i ng-class="{'active': language=='zh-CN'}">中文</i>
+        <i style="margin-top: 12px"><img src="assets/images/gap.png" height="21.3px" width="2px" style="position: relative;top: 3px;"> </i>
+        <i ng-class="{'active': language=='en-US'}">English</i>
+        <span class="press">
+            {{press1}}<i class="tip_img"><img src="assets/images/icon_toolbar_menu1.png" height="34.7px"> </i>{{press2}}
+        </span>
+    </div>
+</div>

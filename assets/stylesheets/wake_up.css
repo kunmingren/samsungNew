@@ -1,0 +1,213 @@
+.service-item-container{
+    width: 100%;
+    height: 100%;
+    padding: 0 32px;
+}
+.service-item-title{
+    font-size: 28px;
+    color: #ffffff;
+    opacity: 0.89;
+    margin-top: 103px;
+}
+.service-item-img{
+    width: 705px;
+    height: 470px;
+    margin-top: 18px;
+    float: left;
+}
+.service-item-text{
+    margin-left: 49px;
+    color: #ffffff;
+    float: left;
+    width: 462px;
+    font-size: 26px;
+    margin-top: 15px;
+    opacity: 0.89;
+}
+.service-item-subtext{
+    font-size: 22px;
+    margin-top: 9px;
+}
+.service-item-btn{
+    background-color: #575C82;
+    margin-top: 49px;
+    height: 63px;
+    text-align: center;
+    line-height: 63px;
+    position: absolute;
+    z-index: 9;
+    border-radius: 6.66px;
+}
+.clock-btn{
+    width: 442px;
+    -webkit-transition: -webkit-transform 0.75s;
+    -moz-transition: -moz-transform 0.75s;
+    transition: transform 0.75s;
+}
+.time-btn{
+    width: 290px;
+    -webkit-transition: -webkit-transform 0.75s;
+    -moz-transition: -moz-transform 0.75s;
+    transition: transform 0.75s;
+}
+.submit-btn{
+    width: 135px;
+    right: 20px;
+    -webkit-transition: -webkit-transform 0.75s;
+    -moz-transition: -moz-transform 0.75s;
+    transition: transform 0.75s;
+}
+
+.click_amt{
+    animation: click 1s forwards;
+    -moz-animation: click 1s forwards;	/* Firefox */
+    -webkit-animation: click 1s forwards;	/* Safari 和 Chrome */
+    -o-animation: click 1s forwards;
+}
+
+@keyframes click
+{
+    /*from {width: 192px;height: 253px;opacity: 1;top: 0}*/
+    /*to {width: 192px;height: 253px;opacity: 0;top:-126.5px}*/
+    0%{
+        -webkit-transform:scale(1);
+    }
+    33%{
+        -webkit-transform:scale(1.1);
+    }
+    66%{
+        -webkit-transform:scale(0.9);
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+
+@-moz-keyframes click /* Firefox */
+{
+    /*from {width: 192px;height: 253px;opacity: 1;top: 0}*/
+    /*to {width: 192px;height: 253px;opacity: 0;top:-126.5px}*/
+    0%{
+        -webkit-transform:scale(1);
+    }
+    33%{
+        -webkit-transform:scale(1.1);
+    }
+    66%{
+        -webkit-transform:scale(0.9);
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+
+@-webkit-keyframes click /* Safari 和 Chrome */
+{
+    /*from {width: 192px;height: 253px;opacity: 1;top: 0}*/
+    /*to {width: 192px;height: 253px;opacity: 0;top:-126.5px}*/
+    0%{
+        -webkit-transform:scale(1);
+    }
+    33%{
+        -webkit-transform:scale(1.1);
+    }
+    66%{
+        -webkit-transform:scale(0.9);
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+
+@-o-keyframes click /* Opera */
+{
+    /*from {width: 192px;height: 253px;opacity: 1;top: 0}*/
+    /*to {width: 192px;height: 253px;opacity: 0;top:-126.5px}*/
+    0%{
+        -webkit-transform:scale(1);
+    }
+    33%{
+        -webkit-transform:scale(1.1);
+    }
+    66%{
+        -webkit-transform:scale(0.9);
+    }
+    100%{
+        -webkit-transform:scale(1);
+    }
+}
+
+.btn_border{
+    background: none;
+    border: 3px solid white;
+    border-radius: 6.66px;
+    -webkit-transition: -webkit-transform 0.75s;
+    -moz-transition: -moz-transform 0.75s;
+    transition: transform 0.75s;
+    z-index: 10;
+    position: absolute;
+    top: 49px;
+}
+
+
+.timeAgain{
+    animation: change 0.75s forwards;
+    -moz-animation: change 0.75s forwards;	/* Firefox */
+    -webkit-animation: change 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: change 0.75s forwards;
+}
+
+@keyframes change
+{
+    from {width: 130px;right: 20px}
+    to {width: 289px;right: 170px}
+}
+
+@-moz-keyframes change /* Firefox */
+{
+    from {width: 130px;right: 20px}
+    to {width: 289px;right: 170px}
+}
+
+@-webkit-keyframes change /* Safari 和 Chrome */
+{
+    from {width: 130px;right: 20px}
+    to {width: 289px;right: 170px}
+}
+
+@-o-keyframes change /* Opera */
+{
+    from {width: 130px;right: 20px}
+    to {width: 289px;right: 170px}
+}
+
+.submitAgain{
+    animation: changed 0.75s forwards;
+    -moz-animation: changed 0.75s forwards;	/* Firefox */
+    -webkit-animation: changed 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: changed 0.75s forwards;
+}
+
+@keyframes changed
+{
+    from {width: 289px;right: 170px}
+    to {width: 130px;right: 20px}
+}
+
+@-moz-keyframes changed /* Firefox */
+{
+    from {width: 289px;right: 170px}
+    to {width: 130px;right: 20px}
+}
+
+@-webkit-keyframes changed /* Safari 和 Chrome */
+{
+    from {width: 289px;right: 170px}
+    to {width: 130px;right: 20px}
+}
+
+@-o-keyframes changed /* Opera */
+{
+    from {width: 289px;right: 170px}
+    to {width: 130px;right: 20px}
+}

@@ -1,0 +1,143 @@
+.music-list-container {
+    position: relative;
+    width: 1212px;
+    height: 527px;
+    margin: 32px 30px;
+    top: 76px;
+    overflow: hidden;
+}
+
+.music-img {
+    float: left;
+    width: 527px;
+    height: 527px;
+    overflow: hidden;
+}
+
+.music-img > img {
+    width: 527px;
+    border-radius: 5px;
+}
+
+.music-list-container > ul {
+    position: relative;
+    left: 167px;
+    overflow: hidden;
+}
+
+.music-list-container > ul > li.selected {
+    font-size: 36px;
+}
+
+.music-list-container > ul > li {
+    height: 45px;
+    line-height: 45px;
+    margin: 10px 0;
+    color: white;
+    font-size: 28px;
+}
+
+
+.music-list-container > ul > li.selected > .music-name {
+    opacity: 1;
+}
+
+.music-list-container > ul > li > .music-name {
+    position: relative;
+    left: 66px;
+    float: left;
+    width: 263px;
+    opacity: 0.69;
+}
+
+.music-pause.selected {
+    display: inline;
+}
+
+.music-pause {
+    height: 30px;
+    top: 6px;
+    position: relative;
+    float: left;
+}
+
+.music-pause img.selected {
+    position: absolute;
+    display: block !important;
+    float: left;
+}
+
+.music-pause img {
+    height: 30px;
+    display: none;
+}
+
+.music-player {
+    position: relative;
+    top: 99px;
+}
+
+.music-player > .music-content {
+    width: 430px;
+    float: left;
+    left: 50%;
+    margin-left: -215px;
+    position: absolute;
+}
+
+.music-player > .music-content > .music-content-bg {
+    width: 430px;
+    height: 430px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.music-player > .music-content > .music-content-bg > img {
+    width: 381px;
+    height: 381px;
+    border-radius: 50%;
+    margin: 25px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation: play 30s linear infinite;
+}
+
+.music-player > .music-content > span {
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    margin-top: 37px;
+}
+
+.music-previous {
+    float: left;
+    position: relative;
+    left: 172px;
+    top: 165px;
+}
+
+.music-next {
+    float: right;
+    position: relative;
+    right: 172px;
+    top: 165px;
+}
+
+@-webkit-keyframes play {
+    0% {
+        /*
+        顺时针旋转
+        */
+        -webkit-transform: rotate(0deg);
+        /*
+        逆时针旋转
+        */
+        /*-webkit-transform:rotate(0deg);*/
+    }
+    100% {
+        /*顺时针旋转*/
+        -webkit-transform: rotate(360deg);
+        /*逆时针旋转*/
+        /*-webkit-transform:rotate(-360deg);*/
+    }
+}

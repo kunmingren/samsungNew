@@ -1,0 +1,94 @@
+
+/* bill page */
+.bill-header, .bill-main {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.bill-header {
+    font-size: 36px;
+}
+
+.bill-header span {
+    height: 70px;
+    line-height: 70px;
+}
+
+.bill-main {
+    font-size: 22px;
+}
+
+.bill-main span {
+    line-height: 56px;
+    height: 56px;
+}
+
+.bill-header>span, .bill-main>li>span {
+    display: inline-block;
+    padding: 0 25px;
+}
+
+.bill-main>li:first-child {
+    border-top: 1px solid #ffffff;
+}
+.bill-main>li {
+    border-bottom: 1px solid #ffffff;
+}
+
+.bill-main {
+    height: 350px;
+}
+
+.bill-header>span:nth-child(1), .bill-main>li>span:nth-child(1) {
+    width: 420px;
+}
+
+.bill-header>span:nth-child(2), .bill-main>li>span:nth-child(2) {
+    width: 230px;
+    text-align: center;
+}
+
+.bill-header>span:nth-child(3), .bill-main>li>span:nth-child(3) {
+    width: 150px;
+    text-align: center;
+}
+
+.bill-footer {
+    width: 950px;
+    margin: 0 auto;
+    font-size: 26px;
+}
+
+.bill-footer:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.bill-footer>.bill-pager-container {
+    float: left;
+    padding-left: 20px;
+}
+
+.bill-footer>.bill-amount-container {
+    float: right;
+    padding-right: 20px;
+}
+
+.bill-pager:before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("../images/ic_arrow_left.png") no-repeat center;
+    background-size: 12px 24px;
+}
+
+.bill-pager:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background: url("../images/ic_arrow_right.png") no-repeat center;
+    background-size: 12px 24px;
+}

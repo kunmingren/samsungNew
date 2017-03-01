@@ -1,0 +1,315 @@
+/*movie page*/
+.movie-item-container{
+    width: 100%;
+    height: 720px;
+}
+#movie-detail-container{
+    width: 100%;
+    height: 58.15%;
+    background-size: cover;
+    transition: transform 1.75s;
+    background-repeat: no-repeat;
+}
+.bgAdd{
+    animation: add 1.75s forwards;
+    -moz-animation: add 1.75s forwards;	/* Firefox */
+    -webkit-animation: add 1.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: add 1.75s forwards;
+}
+#movie-list-container{
+    width: 100%;
+    height: 41.8%;
+}
+.movie-head1{
+    height: 106.7px;
+    position: relative;
+    top: 70px;
+    left: 37px;
+}
+.movie-head{
+    height: 106.7px;
+    position: relative;
+    top: 2px;
+}
+.movie-name{
+    font-size: 32px;
+    height: 90px;
+    line-height: 100px;
+}
+.movie-dire{
+    font-size: 22px;
+    line-height: 30px;
+}
+.movie-act{
+    font-size: 22px;
+    line-height: 30px;
+    line-height: 45px;
+}
+.movie-intro{
+    height: 165px;
+    font-size: 18px;
+    line-height: 27px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+.movie-icon{
+    width: 40px;
+    height: 40px;
+    margin-left: 31.3px;
+    margin-top: 32.7px;
+    float: left;
+}
+.movie-text{
+    margin-left: 13.3px;
+    margin-top: 35.3px;
+    font-size: 25.3px;
+    color: #F8C7A4;
+    float: left;
+}
+.movie-type{
+    /*height: 173.53px;*/
+    margin: 34px 32px;
+    width: 66.67px;
+    float: left;
+}
+.top-arrow{
+    width: 19px;
+    height: 11px;
+    background-image: url("../images/arrow_up.png");
+    margin-left: 23.85px;
+    margin-top: 17.6px;
+}
+.bot-arrow{
+    width: 19px;
+    height: 11px;
+    margin-top: 18.67px;
+    background-image: url("../images/arrow_down.png");
+    margin-left: 23.85px;
+}
+.type-name{
+    margin-top: 25px;
+    height: 46.67px;
+    text-align: center;
+    font-size: 33.33px;
+    color: #ffffff;
+    letter-spacing: 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.type-index{
+    height: 28px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.movie-image-container{
+    float: left;
+    width: 1149px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.type-container{
+    position: absolute;
+    width: auto;
+    width: 500%;
+}
+.img-container{
+    position: relative;
+    float: left;
+    width: 116px;
+    height: 173.3px;
+    margin-right: 20px;
+}
+.img-container:first-child{
+    margin-left: 15px;
+}
+.rotate_img{
+    -webkit-transition: -webkit-transform 0.75s;
+    -moz-transition: -moz-transform 0.75s;
+    transition: transform 0.75s;
+    -o-animation: transform 0.75s;
+    opacity: 1;
+    position: absolute;
+    height:173.3px;
+    width: 116px;
+    left: 0;
+    top: 0px;
+    /*margin-top: 34.67px;*/
+}
+/*降低透明度动画*/
+.opacityReduce{
+    animation: reduce 0.75s forwards;
+    -moz-animation: reduce 0.75s forwards;	/* Firefox */
+    -webkit-animation: reduce 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: reduce 0.75s forwards;
+}
+
+@keyframes reduce
+{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-moz-keyframes reduce /* Firefox */
+{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@-webkit-keyframes reduce /* Safari 和 Chrome */
+{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@-o-keyframes reduce /* Opera */
+{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+
+/*增加透明度动画*/
+.opacityAdd{
+    animation: add 0.75s forwards;
+    -moz-animation: add 0.75s forwards;	/* Firefox */
+    -webkit-animation: add 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: add 0.75s forwards;
+}
+
+@keyframes add
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-moz-keyframes add /* Firefox */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@-webkit-keyframes add /* Safari 和 Chrome */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@-o-keyframes add /* Opera */
+{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+/*选择电影动画*/
+.choseMovie {
+    animation: chose 0.2s forwards;
+    -moz-animation: chose 0.2s forwards; /* Firefox */
+    -webkit-animation: chose 0.2s forwards; /* Safari 和 Chrome */
+    -o-animation: chose 0.2s forwards;
+}
+
+@keyframes chose {
+    from {
+        width: 116px;
+        height:173.3px;
+    }
+    to {
+        width: 144.67px;
+        height: 216px;
+        top: 12.66px;
+        left: -14.33px;
+        margin-right: -9px;
+    }
+}
+
+@-moz-keyframes chose /* Firefox */
+{
+    from {
+        width: 116px;
+        height:173.3px;
+    }
+    to {
+        width: 144.67px;
+        height: 216px;
+        top: 12.66px;
+        left: -14.33px;
+        margin-right: -9px;
+    }
+}
+
+@-webkit-keyframes chose /* Safari 和 Chrome */
+{
+    from {
+        width: 116px;
+        height:173.3px;
+    }
+    to {
+        width: 144.67px;
+        height: 216px;
+        top: 12.66px;
+        left: -14.33px;
+        margin-right: -9px;
+    }
+}
+@-o-keyframes chose /* Opera */
+{
+    from {
+        width: 116px;
+        height:173.3px;
+    }
+    to {
+        width: 144.67px;
+        height: 216px;
+        top: 12.66px;
+        left: -14.33px;
+        margin-right: -9px;
+    }
+}
+
+
+.videoContro {
+    display: inline-block;
+    position: absolute;
+    bottom: 100px;
+    width: 1000px;
+    left: 50%;
+    margin-left: -500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 5px;
+    height: 20px;
+    line-height: 20px;
+}
+
+#playProgress {
+    width: 800px;
+    height: 10px;
+    float: left;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: 5px;
+}
+
+#playtime {
+    height: 5px;
+    background-color: white;
+    display: block;
+    margin-top: 2.5px;
+}
+#startTime{
+    margin-left: 10px;
+}
+#endTime {
+    float: right;
+    margin-right: 10px;
+}
+.movie-txt{
+    width: 530px;
+    color: #ffffff;
+}
+
+

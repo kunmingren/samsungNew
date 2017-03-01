@@ -1,0 +1,183 @@
+.food-list-container{
+    height: 67px;
+    overflow: hidden;
+    padding: 0 30px 30px 30px;
+}
+.list-container{
+    width: 500%;
+    overflow: hidden;
+    position: relative;
+}
+.food-title{
+    height: 67px;
+    line-height: 67px;
+    width: 280px;
+    margin-right: 6px;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    background-color: rgba(255,255,255,0.1);
+}
+.food-title-text{
+    color: #ffffff;
+    opacity: 0.89;
+}
+.food-title:first-child{
+    border-radius: 6.66px 0px 0px 6.66px;
+}
+.food-title:last-child{
+    border-radius: 0px 6.66px 6.66px 0px;
+}
+.food-selected{
+    opacity: 1;
+    color: #3C3937;
+    background: #FFFFFF;
+}
+.food-detail-container{
+    padding: 0 30px;
+}
+.food-detail-img{
+    width: 635px;
+    height: 425px;
+    float: left;
+}
+.food-content-right{
+    float: left;
+    margin-left: 30px;
+    height: 425px;
+    width: 548px;
+    position: relative;
+}
+.food-detail-title{
+    font-size: 32px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+}
+.food-detail-intro{
+    opacity: 0.89;
+    font-size: 25px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    margin-bottom: 25px;
+    height: 200px;
+}
+.food-detail-price{
+    font-size: 30px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    width: 200px;
+    display: inline-block;
+}
+.food-btn-sub{
+    border-radius: 6.66px 0px 0px 6.66px;
+    width: 55px;
+    height: 67px;
+    margin-left: 50px;
+    margin-right: 5px;
+    line-height: 67px;
+    text-align: center;
+    font-size: 31px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.food-btn-number{
+    width: 160px;
+    height: 67px;
+    line-height: 67px;
+    text-align: center;
+    margin-right: 5px;
+    font-size: 31px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.food-btn-add{
+    border-radius: 0px 6.66px 6.66px 0px;
+    width: 55px;
+    height: 67px;
+    line-height: 67px;
+    text-align: center;
+    font-size: 31px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.food-btn-submit{
+    border-radius: 6.66px;
+    width: 100%;
+    height: 67px;
+    line-height: 67px;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.food-btn{
+    display: inline-block;
+    background: #575C82;
+}
+
+
+.foodBot{
+    animation: food_bigger 0.75s forwards;
+    -moz-animation: food_bigger 0.75s forwards;	/* Firefox */
+    -webkit-animation: food_bigger 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: food_bigger 0.75s forwards;
+}
+@keyframes food_bigger
+{
+    from {width: 55px;top: 261px;right: 3px}
+    to {width: 544px;top: 357px;right: 0px}
+}
+
+@-moz-keyframes food_bigger /* Firefox */
+{
+    from {width: 55px;top: 261px;right: 3px}
+    to {width: 544px;top: 357px;right: 0px}
+}
+
+@-webkit-keyframes food_bigger /* Safari 和 Chrome */
+{
+    from {width: 55px;top: 261px;right: 3px}
+    to {width: 544px;top: 357px;right: 0px}
+}
+
+@-o-keyframes food_bigger /* Opera */
+{
+    from {width: 55px;top: 261px;right: 3px}
+    to {width: 544px;top: 357px;right: 0px}
+}
+
+
+.foodTop{
+    animation: food_smaller 0.75s forwards;
+    -moz-animation: food_smaller 0.75s forwards;	/* Firefox */
+    -webkit-animation: food_smaller 0.75s forwards;	/* Safari 和 Chrome */
+    -o-animation: food_smaller 0.75s forwards;
+}
+@keyframes food_smaller
+{
+    from {width: 544px;top: 357px;right: 0px}
+    to {width: 55px;top: 261px;right: 3px}
+}
+
+@-moz-keyframes food_smaller /* Firefox */
+{
+    from {width: 544px;top: 357px;right: 0px}
+    to {width: 55px;top: 261px;right: 3px}
+}
+
+@-webkit-keyframes food_smaller /* Safari 和 Chrome */
+{
+    from {width: 544px;top: 357px;right: 0px}
+    to {width: 55px;top: 261px;right: 3px}
+}
+
+@-o-keyframes food_smaller /* Opera */
+{
+    from {width: 544px;top: 357px;right: 0px}
+    to {width: 55px;top: 261px;right: 3px}
+}
